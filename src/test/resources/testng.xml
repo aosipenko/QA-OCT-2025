@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--@BeforeSuite-->
+<suite name="Suite1" verbose="1">
+    <test name="My first Test">
+        <classes>
+            <class name="org.prog.session5.MyNGTest"/>
+            <class name="org.prog.session5.MyNGTest2"/>
+            <class name="org.prog.session5.MyNGTest3"/>
+        </classes>
+    </test>
+</suite>
