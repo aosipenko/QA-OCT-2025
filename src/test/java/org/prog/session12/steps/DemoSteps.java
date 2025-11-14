@@ -3,8 +3,13 @@ package org.prog.session12.steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
+
+import java.util.Random;
 
 public class DemoSteps {
+
+    private final static Random RAND = new Random();
 
     @Given("my first step")
     public void myFirstStepOld() {
@@ -34,5 +39,24 @@ public class DemoSteps {
         } else {
             System.out.println("Reject Cookies");
         }
+    }
+
+
+    @Given("A step that rarely fails")
+    public void aStepThatRarelyFails() {
+        int i = RAND.nextInt(100);
+        Assert.assertTrue(i > 5);
+    }
+
+    @Given("A step that sometimes fails")
+    public void aStepThatSometimesFails() {
+        int i = RAND.nextInt(100);
+        Assert.assertTrue(i > 15);
+    }
+
+    @Given("A step that often fails")
+    public void aStepThatOftenFails() {
+        int i = RAND.nextInt(100);
+        Assert.assertTrue(i > 35);
     }
 }
