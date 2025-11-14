@@ -22,7 +22,7 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
     @BeforeSuite
     public void beforeSuite() throws SQLException {
         DBSteps.connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/db", "root", "password");
+                "jdbc:mysql://mysql-db-1:3306/db", "root", "password");
         WebSteps.driver = new ChromeDriver();
     }
 

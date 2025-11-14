@@ -1,3 +1,12 @@
+# BEFORE YOU START:
+
+#  docker network ls
+#  docker network create automation-net
+#  docker network inspect [net_id]
+#  docker ps
+#  docker network connect automation-net [containers]
+#  docker-compose up
+
 version: "3"
 
 services:
