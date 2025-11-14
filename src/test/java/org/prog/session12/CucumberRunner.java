@@ -20,7 +20,7 @@ import java.sql.SQLException;
 //TODO: Move previous HW to cucumber BDD, make amount of phones request a step param
 
 @CucumberOptions(
-        features = "src/test/resources/features/session11",
+        features = "src/test/resources/features/session12",
         glue = "org.prog.session12.steps",
         plugin = {
                 "pretty",
